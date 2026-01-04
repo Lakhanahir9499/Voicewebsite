@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Digital Break</title>
+
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #0f172a;
+  color: white;
+  font-family: sans-serif;
+}
+
+#overlay {
+  position: fixed;
+  inset: 0;
+  background: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+#overlay h1 {
+  font-size: 24px;
+  opacity: 0.9;
+}
+</style>
+</head>
+
+<body>
+
+<div id="overlay">
+  <h1>Screen par kahin bhi tap karo 🌿<br>Phir bas suno.</h1>
+</div>
+
+<audio id="audio" src="audio.mp3"></audio>
+
+<script>
+const overlay = document.getElementById("overlay");
+const audio = document.getElementById("audio");
+
+overlay.addEventListener("click", () => {
+  audio.play();
+  overlay.style.display = "none";
+});
+</script>
+
+</body>
+</html>
